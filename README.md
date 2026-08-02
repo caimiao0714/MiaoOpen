@@ -2,6 +2,8 @@
 
 ## 蔡苗
 
+- [ ] TH周一下午3点会议：https://meeting.tencent.com/dm/Skxy2PYmVE6t
+- [ ] YP周一上午10点会议：待YP发送链接
 - [ ] ！！！孙秋畅入职 -> 已重新提交 -> 校长已催人事处，现等人事处面试消息
 - [ ] JQT review
 - [ ] 需与zx沟通队列数据使用的问题，想办法拿到慢阻肺队列数据使用权限
@@ -12,12 +14,12 @@
 	- [ ] 伦理初始审查申请 -> 需黄月婷根据上面一个文件夹完成
 - [ ] 清理西部某省住院病案首页表头 -> 已生成英文名称 -> 需蔡苗检查并合并数据库
 - [ ] 发放劳务费 -> 黄月婷下月初办理（只有上半月可以发放劳务费）
-- [ ] 黄月婷 入职 ->  大学OA已通过，招聘[公告](https://zpxt.gzhmu.edu.cn/gzykdx/recruit/a.epx?action=webView&entityId=HR_RECRUIT_NOTICE&selectedId=777)已发布，需公告10天
+- [ ] 黄月婷 入职 ->  大学OA已通过，招聘[公告](https://zpxt.gzhmu.edu.cn/gzykdx/recruit/a.epx?action=webView&entityId=HR_RECRUIT_NOTICE&selectedId=777)已于2026-07-29发布，需公告7天（2026-08-04达7天）
 - [ ] 黄月婷 -> 打印纸 其它办公用品（电脑 显示器）
 - [ ] 黄月婷 -> 显卡+内存条 （等待胡伟忠那边提供合同和发票），需联系谢欣雨和颜子竹看看如何报账/报销
-- [ ] 马超锋服务器 -> 蔡苗已联系马超锋（问题6无法解决），马老师已转发网络中心老师
+- [ ] 马超锋服务器 -> 蔡苗已联系马超锋（问题6无法解决），马老师已转发网络中心老师 -> 周一需update
 - [ ] 彭琛 aging biobank数据申请  -> 蔡苗已提交授权书，等待认证（彭琛需探索有什么变量可用，什么课题可以开展）
-- [ ] TH周一下午3点会议：https://meeting.tencent.com/dm/Skxy2PYmVE6t
+
 
 - [ ] GLP1 & COPD
 - [ ] 5-year paper
@@ -30,8 +32,8 @@
 
 ## 胡郁
 
-- [ ] 完成纳入排除标准流程图
-- [ ] 整理代谢物结果 -> 结果已发蔡苗，需整理总结目前的结果，蔡苗需检查、修改、优化代码，确定下一步
+- [X] 完成纳入排除标准流程图
+- [X] 整理代谢物结果 -> 结果已发蔡苗，需整理总结目前的结果，蔡苗需检查、修改、优化代码，确定下一步
 	1. [X] 横截面分析
 	2. [X] 纵向数据分析（绝对值变化）: y1 - y0
 	3. [X] 纵向数据分析（年均变化率）: (y1 - y0)/(t1 - t0)
@@ -40,7 +42,7 @@
 
 ## 黄月婷
 
-- [ ] 黄月婷 入职 ->  大学OA已通过，招聘[公告](https://zpxt.gzhmu.edu.cn/gzykdx/recruit/a.epx?action=webView&entityId=HR_RECRUIT_NOTICE&selectedId=777)已发布，需公告10天
+- [ ] 黄月婷 入职 ->  大学OA已通过，招聘[公告](https://zpxt.gzhmu.edu.cn/gzykdx/recruit/a.epx?action=webView&entityId=HR_RECRUIT_NOTICE&selectedId=777)已于2026-07-29发布，需公告7天（2026-08-04达7天）
 - [ ] 清理西部某省住院病案首页表头 -> 已生成英文名称 -> 需蔡苗检查并合并数据库
 
 
