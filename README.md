@@ -29,9 +29,10 @@
 ## 秋畅
 
 - [ ] ！！！孙秋畅入职 -> 已重新提交 -> 校长已催人事处，现等人事处面试消息
+- [ ] 秋畅入职PPT和材料
 - [ ] 马超锋服务器 -> 蔡苗已联系马超锋（问题6无法解决），马老师已转发网络中心老师 -> 需要进一步修改，已转发秋畅 -> 已修改并返回马老师（2026-08-05）
+- [ ] 基于DAG的混杂因素筛选 -> 蔡苗优化prompt（已完成） -> 按照Confound modelling in UK Biobank brain imaging提到的最简单confound组合，去整理影像的confounders(2026-08-06)
 - [ ] 整理脑部影像的分类和结果
-- [ ] 基于DAG的混杂因素筛选 -> 蔡苗优化prompt（已完成） -> 秋畅定义并整理confounders
 
 ## 胡郁
 
@@ -40,12 +41,12 @@
 	1. [X] 横截面分析
 	2. [X] 纵向数据分析（绝对值变化）: y1 - y0
 	3. [X] 纵向数据分析（年均变化率）: (y1 - y0)/(t1 - t0)
-- [X] 需要生成weighted & unweighted Table 1，以及基于机器学习的PS weighting -> 蔡苗已完成基于SuperLearner的ATE weight
-- [ ] 需要成系统地基于DAG增选confounder
-- [ ] 依据代谢物的限值做成time to event，用Cox回归做出结果
-- [ ] 需要把目前的200多个结果划分/聚合到有临床意义的分类，有更强的临床指向性
-- [ ] 依据已有的代谢物指标，创建新的具有临床意义的结局指标
-
+- [X] 蔡苗：需要生成weighted & unweighted Table 1，以及基于机器学习的PS weighting -> 已完成基于SuperLearner的ATE weight的代码模板
+- [ ] 蔡苗：需要设定出weighted regression的代码模板和框架
+- [ ] 胡郁：需要成系统地基于DAG增选confounder
+- [ ] 胡郁：需要把目前的200多个结果划分/聚合到有临床意义的分类，有更强的临床指向性
+- [ ] 胡郁：依据已有的代谢物指标，创建新的具有临床意义的结局指标
+- [ ] 胡郁：依据代谢物的限值做成time to event，用Cox回归做出结果
 
 ## 黄月婷
 
