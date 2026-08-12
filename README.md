@@ -32,7 +32,9 @@
 - [ ] ！！！孙秋畅入职 -> 已重新提交 -> 校长已催人事处，现等人事处面试消息
 - [ ] 秋畅入职PPT和材料
 - [ ] 马超锋服务器 -> 蔡苗已联系马超锋（问题6无法解决），马老师已转发网络中心老师 -> 需要进一步修改，已转发秋畅 -> 已修改并返回马老师（2026-08-05）
-- [ ] 读一下[这篇文章](https://jtd.amegroups.org/article/view/58857/html)，然后基于你这边想做的方向，写一个2页A4纸之内的研究方案给我？大致介绍一下你想依托这个队列做什么就可以，内容足够支撑3篇文章的体量就行，要求简明扼要、重点突出。我会结合你的东西给找金存校长汇报，申请使用这个ECOPD队列数据
+- [X] 三个研究内容+修改代码：disease_开头的这些变量（比如disease_132032_prevalent_t0），如果是NA都要转化成0或者No
+night_shift_work, workplace_XXX, pack_years把NA转化成0
+- [X] 读一下[这篇文章](https://jtd.amegroups.org/article/view/58857/html)，然后基于你这边想做的方向，写一个2页A4纸之内的研究方案给我？大致介绍一下你想依托这个队列做什么就可以，内容足够支撑3篇文章的体量就行，要求简明扼要、重点突出。我会结合你的东西给找金存校长汇报，申请使用这个ECOPD队列数据
 - [ ] 需修改
 	1. milk_category这个是character，而且所有的分类都是milk
 	2. disease_开头的这些变量（比如disease_132032_prevalent_t0），如果是NA都要转化成0或者No
@@ -59,11 +61,7 @@
 	+ 参考秋畅的食物摄入 + 含糖饮料
 	+ 心血管疾病
 	+ Drug use disorder
-- [ ] 胡郁：仔细学习这两篇文章[NEJM](https://www.nejm.org/doi/10.1056/NEJMoa2510226) [BMJ](https://www.bmj.com/content/392/bmj-2025-086886) Methods的写法和思路（注意附件中的eMethods也需要仔细阅读），写出以下部分的方法学初稿（请勿用AI直接生成，第一步先学习范文的思路，用自己的思考和逻辑写出来，然后再用AI去润色你的语言；我希望看到两个版本：1你自己依靠思维逻辑写的版本，2.AI润色之后的版本）：
-	1. Cohort construction（需要有个cohort flow）
-	2. Exposure (definition of COPD and healthy control [non-COPD])
-	3. Outcomes （暂时还不用写，因为取决于后面构建的outcomes）
-	4. Covariates
+- [X] 主要参照[NEJM](https://www.nejm.org/doi/10.1056/NEJMoa2510226) 写了一份方法学初稿，内容包括：Cohort construction➕Exposure➕Covariates，附流程表v1
 - [ ] 胡郁：需要把目前的200多个结果划分/聚合到有临床意义的分类，有更强的临床指向性
 - [ ] 胡郁：依据代谢物的限值做成time to event，用Cox回归做出结果
 
