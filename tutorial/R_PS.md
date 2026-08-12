@@ -1,3 +1,27 @@
+# Update R package
+
+```{r}
+library(data.table)
+
+x <- old.packages()
+
+pkg_update <- if (is.null(x)) {
+  data.table(
+    package = character(),
+    current_version = character(),
+    available_version = character()
+  )
+} else {
+  as.data.table(x)[, .(
+    package = Package,
+    current_version = Installed,
+    available_version = ReposVer
+  )]
+}
+
+pkg_update
+```
+
 # PS
 
 ## Create ATE weight using SuperLearner
