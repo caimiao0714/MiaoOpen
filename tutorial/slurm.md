@@ -6,7 +6,7 @@ Below is R code to generate:
 3. `log` folder to record logs
 
 ```{r}
-pacman::p_load(glue, stringr, readr)
+pacman::p_load(glue, stringr, readr, fst, data.table)
 
 file_path = '/mnt/data1/Users/hy001'
 
@@ -39,6 +39,65 @@ data.table(file_name = list.files(glue('{file_path}/Batch/2026-08-18_batch_lm/Co
 # 5. Create a log folder
 fs::dir_create(glue("{file_path}/Batch/2026-08-18_batch_lm/Code/log"))
 ```
+
+### manifest
+
+```
+#!/bin/bash
+
+#SBATCH --job-name=R_batch
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=8G
+#SBATCH --time=12:00:00
+#SBATCH --output=logs/%A_%a.out
+#SBATCH --error=logs/%A_%a.err
+
+# Go to the directory from which sbatch was submitted
+cd "$SLURM_SUBMIT_DIR"
+
+# Manifest file containing one R script per line
+MANIFEST="_batch_list.txt"
+
+# Read the R script corresponding to this array task
+SCRIPT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" "$MANIFEST" | tr -d '\r')
+
+# Print basic job information
+echo "=============================================="
+echo "SLURM job ID:       $SLURM_JOB_ID"
+echo "SLURM array job ID: $SLURM_ARRAY_JOB_ID"
+echo "SLURM task ID:      $SLURM_ARRAY_TASK_ID"
+echo "R script:           $SCRIPT"
+echo "Host:               $(hostname)"
+echo "Working directory:  $(pwd)"
+echo "Start time:         $(date)"
+echo "=============================================="
+
+# Check that the manifest returned a script name
+if [[ -z "$SCRIPT" ]]; then
+    echo "ERROR: No script found for task $SLURM_ARRAY_TASK_ID"
+    exit 1
+fi
+
+# Check that the R script exists
+if [[ ! -f "$SCRIPT" ]]; then
+    echo "ERROR: R script does not exist: $SCRIPT"
+    exit 1
+fi
+
+# Run the R script
+Rscript "$SCRIPT"
+
+STATUS=$?
+
+echo "=============================================="
+echo "R script:   $SCRIPT"
+echo "Exit code:  $STATUS"
+echo "End time:   $(date)"
+echo "=============================================="
+
+exit $STATUS
+```
+
 
 
 # Test run
@@ -83,3 +142,15 @@ sacct -j 9 \
 (base) root@miaolab:/mnt/data1/Users/hy001/Batch/2026-08-18_batch_lm/Code# sacct -j 251 \
   --format=JobID,JobName,State,Elapsed,MaxRSS,ExitCode
 Slurm accounting storage is disabled
+
+# Combine output csv files
+
+```
+result = list.files('/mnt/data1/Users/hy001/Batch/2026-08-18_batch_lm/Results/', 
+                    pattern = '^lm_.*\\.csv$', 
+                    full.names = TRUE) %>% 
+  vroom::vroom() %>% 
+  setDT()
+
+result
+```
