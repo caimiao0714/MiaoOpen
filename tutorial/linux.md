@@ -86,6 +86,7 @@ systemctl status slurmd --no-pager
 
 
 
+
 # File edit
 
 ## nano
@@ -126,3 +127,31 @@ NodeName=miaolab CPUs=160 Boards=1 SocketsPerBoard=1 CoresPerSocket=80 ThreadsPe
 PartitionName=compute Nodes=miaolab Default=YES MaxTime=7-00:00:00 State=UP
 
 
+# Run R at background
+
+```
+cd /mnt/data1/Users/hyt001/Project11/Data/Address/batch/
+nohup R CMD BATCH ./address_text_1_100.R &
+```
+
+```{r}
+options(scipen = 99)
+# Generate linux code
+for (i in 1:25) {
+  cat(glue("nohup R CMD BATCH /mnt/data1/Users/hyt001/Project11/Data/Address/batch/address_text_{(i)*10000 + 1}_{(i + 1)*10000}.R &\n\n"))
+}
+```
+
+# Conda
+
+```
+conda create -n py312 python=3.12 ipykernel jupyter anaconda
+
+```
+
+Make `conda` available for every user
+
+```
+echo 'export PATH="/mnt/data1/Software/Anaconda/bin:$PATH"' > /etc/profile.d/conda.sh
+chmod +x /etc/profile.d/conda.sh
+```
