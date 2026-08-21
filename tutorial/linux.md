@@ -155,3 +155,20 @@ Make `conda` available for every user
 echo 'export PATH="/mnt/data1/Software/Anaconda/bin:$PATH"' > /etc/profile.d/conda.sh
 chmod +x /etc/profile.d/conda.sh
 ```
+
+Install packages
+
+```
+conda activate py312
+conda install -c conda-forge pandas numpy xarray dask psutil scikit-learn
+```
+
+## python
+
+```
+bash
+conda init
+conda activate py312
+cd /mnt/data1/Users/hyt001/Project11/data_era/batch
+nohup python ERA5_2012.py > ERA5_2012.log 2>&1 &
+```

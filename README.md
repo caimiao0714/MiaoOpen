@@ -61,6 +61,7 @@ night_shift_work, workplace_XXX, pack_years把NA转化成0
 	+ [ ] Arial、11号字体、双倍行距、段前后加0.5倍行距
 - [ ] 胡郁：需要把目前的200多个结果划分/聚合到有临床意义的分类，有更强的临床指向性
 - [-] 胡郁：依据代谢物的限值做成time to event，用Cox回归做出结果（这个做不了，因为大部分NMR指标都不是临床常用的指标，无具有临床意义的阈值）
+- 2026-08-20 confounders更新成69个，已完成插补；outcome整理362个，初步分类
 - [ ] 2026-08-13至2026-08-16
 1. Cohort队列加急性期感染排除病例，尝试筛查药物相关病例，优化流程图逻辑，美化流程图，写cohort.V2
 2. Covariates分类整理好后，基于imputation_PS.qmd代码进行所有数据的插补（COPD及非COPD组分别插补），记得SL library那一步需要选上xgboost，备注上不需要添加的那些模型可以不用加进去。记得插补之前有缺失的变量需要每一个变量汇报缺失的数量和比例，参考我的supplementary materials。
@@ -79,5 +80,8 @@ night_shift_work, workplace_XXX, pack_years把NA转化成0
 1. 胡郁：COPD & metabolic
 2. 秋畅： COPD & 影像组学
 3. 月婷：四川省住院病案？
+
+
+
 
 
